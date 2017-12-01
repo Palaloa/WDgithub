@@ -1,0 +1,18 @@
+Assignment 1
+- Upload the design to the discussion forum
+
+Assignment 2
+- Update the Javascript file so that:
+	- it deletes adds and updates the habits
+
+- Complete visual schema of habit database -> Illustrator.
+
+Assignment 3
+- Create Node.js script
+	-
+
+- implement AJAX for dynamic updatig of the web page
+	- 
+
+- Create Queries for SQL and note responses.
+	-
