@@ -1,3 +1,8 @@
-function addHabit() {
-   document.getElementById("habit").innerHTML = "Add a habit";
-}
+function showForm() {
+    document.getElementById("habit").style.display='block';
+    document.getElementById("addHabitButton").style.display='none';
+ }
+ 
+ function updateName() {
+     //FIXME
+ }
