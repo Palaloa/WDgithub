@@ -1,72 +1,81 @@
 <!doctype html>
 <html>
 <head>
-	<title> AJHABITPAGE</title>
-	<style>
-		table, th, td {
-			border:1px solid black;
-			border-collapse:collapse;
-           }
-           th, td {
-           	padding: 5px;
-           }
-           body {
-           	
-           	background-color: lightgrey;
-           }
-	</style>
+	<title> AJ-HABITPAGE</title>
+    <script src = "AJH.js"></script>
 </head>
-<body>
-	<h1 style="text-align:center;color:blue;">AJHabitTracker</h1>
 
+<body>
 	<header>
-		<nav  style="text-align: right;">
-			<style>
-			nav {
-				position: absolute;
-				right: 0px;
-				top: 0px;
-			}
-		</style>
-			
-			<a href="#">Sign up!</a> |
-			<a href="#">Log in!</a>  |
-			<a href="#">Support! </a>|
+        <nav>			
+			<a href = "#">Sign up!</a> |
+			<a href = "#">Log in!</a>  |
+			<a href = "#">Support! </a>|
 		</nav>
 	</header>
+
 	<main>
 		<h2 style="text-align:center;">Check your progress here!</h2>
 		<table align="center">
 			<tr>
-				<td>
-					[Name of a habit] <BR>
-					[Number of days you have successfully done it] <BR>
-					<button type="button" onclick="alert('Are you sure?')">Remove</button> 
-					<button type="button" onclick="alert('Do you want to confirm?')">Edit</button>
+				<td id="td1">
+                        Name: 10k steps every day [pos]<BR>
+                        #Days: 17 <BR>
+                        <button type = "button" onclick = "confirmDeleteHabit('td1')">Remove</button>
+
 				</td>
-				<td>
-					[Name of a habit] <BR>
-					[Number of days you have successfully done it] <BR>
-					<button type="button" onclick="alert('Are you sure?')">Remove</button> 
-					<button type="button" onclick="alert('Do you want to confirm?')">Edit</button>
+				<td id="td2">
+                        Name: vegan diet every weekday [pos]<BR>
+                        #Days: 53 <BR>
+                        <button type = "button" onclick = "confirmDeleteHabit('td2')">Remove</button>
 				</td>
 			</tr>
 			<tr>
-				<td>
-					[Name of a habit] <BR>
-					[Number of days you have successfully done it] <BR>
-					<button type="button" onclick="alert('Are you sure?')">Remove</button> 
-					<button type="button" onclick="alert('Do you want to confirm?')">Edit</button>
-				</td>
-				<td>
-					[Name of a habit] <BR>
-					[Number of days you have successfully done it] <BR>
-					<button type="button" onclick="alert('Are you sure?')">Remove</button> 
-					<button type="button" onclick="alert('Do you want to confirm?')">Edit</button>
-				</td>
+                <td id="td3">
+                        Name: 1 paragraph of book [pos]<BR>
+                        #Days: 104 <BR>
+                        <button type = "button" onclick = "confirmDeleteHabit('td3')">Remove</button>
+                </td>
+                <td id="td4">
+                        Name: no alcohol [neg]<BR>
+                        #Days: 2 <BR>
+                        <button type = "button" onclick = "confirmDeleteHabit('td4')">Remove</button>
+                </td>
 			</tr>
+            <tr>
+                <td>
+                    <p>
+                        <span id="testPar"></span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><button type = "button" id = "addHabitButton"  onclick = "showForm()">Add Habit</button></td>
+            </tr>
 		</table>
+        <form id="habitForm" style = "display: none">
+            Name of Habit:<br>
+            <input type="text" name = "Habit Name" id = "habitName"><br>
+            Type of Habit:<br>
+            <table>
+                <tr>
+                    <td>
+                        Positive<BR>
+                        <input type = "radio" name = "type" value = "pos">
+                    </td>
+                    <td>
+                        Negative<BR>
+                        <input type = "radio" name = "type" value = "neg">
+                    </td>
+                </tr>
+            </table>
+            <input type = "submit" onclick = "formAddHabit()">
+        </form>
 	</main>
+    <footer>
+        Get Help
+        &copy;AJ-Tracker
+    </footer>
 </body>
 </html>
 	
