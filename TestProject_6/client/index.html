@@ -1,18 +1,41 @@
 <!doctype html>
 <html manifest="myman.appcache">
 <head>
-	<title>Plain text HABITs</title>
+	<title>AJ Habit Tracker</title>
 	<script src="http://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
 	<script src="javascript/client-app.js" type="text/javascript"></script>
 </head>
 
 <body>
+	<header>
+		<nav>			
+			<a href = "#">Sign up!</a> |
+			<a href = "#">Log in!</a>  |
+			<a href = "#">Support! </a>|
+		</nav>
+	</header>
 	<main>
 		<section id="habit-section">
 			<p>My list of HABITS:</p>
 			<ul id="habit-list">
 			</ul>
 		</section>
+		<!--
+			form id="habitForm" style = "display: none">
+				Name of Habit:<br>
+				<input type="text" name = "Habit Name" id = "habitName"><br>
+				Type of Habit:<br>
+							Positive<BR>
+							<input type = "radio" name = "type" value = "pos">
+							Negative<BR>
+							<input type = "radio" name = "type" value = "neg">
+				<input type = "submit">
+			</form>
+		-->
 	</main>
 </body>
+<footer>
+		Get Help
+        &copy;AJ-Tracker
+</footer>
 </html>

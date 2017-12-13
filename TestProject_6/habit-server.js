@@ -64,3 +64,37 @@ app.get("/deletehabit", function (req, res) {
 		res.end("Error: missing message parameter");
 	}
 });
+
+//update a habit on the server
+app.get("/updatehabit", function (req, res) {
+	var url_parts = url.parse(req.url, true);
+	var query = url_parts.query;
+	
+	if(query["message"]!==undefined) {
+		var tx = { message : query["message"],
+				newmessage : query["newmessage"],
+				newtype : query["newtype"],
+				newinterval : query["newinterval"]
+	};
+
+		function findElementByMessage(element){
+			return element.message == tx.message;
+		}
+
+		var index = habits.findIndex(findElementByMessage);
+		if(index > -1){
+			habits[index].message = tx.newmessage;
+			habits[index].type = tx.newtype;
+			habits[index].interval = tx.newinterval;
+
+			console.log("Updated " + tx.message);
+			res.end("Habit updated successfully");
+		} else{
+			res.end("Error: habit not found");
+		}
+		
+	}
+	else {
+		res.end("Error: missing message parameter");
+	}
+});
